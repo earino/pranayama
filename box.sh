@@ -1,14 +1,15 @@
 #!/bin/bash
 
-PRANAYAMA_TIME=30
+PRANAYAMA_TIME=60
 SECONDS_TO_BREATHE=3
 
-while getopts ":p:s:" o; 
+while getopts ":p:s:m:" o; 
 do
 	case "$o" in
 	p)	PRANAYAMA_TIME="$OPTARG";;
 	s)	SECONDS_TO_BREATHE="$OPTARG";;
-	[?])	echo "Usage: $0 [-p] seconds_to_pranayama (sefault 30) [-s] base_count (default 3) [-v] voice (default Victoria)"
+	m)      PRANAYAMA_TIME=`expr $OPTARG \* 60`;;
+	[?])	echo "Usage: $0 [-p] seconds_to_pranayama (sefault 60) [-m] minutes_to_pranayama (default 1) [-s] base_count (default 3) [-v] voice (default Victoria)"
 		exit 1;;
 	esac
 done
