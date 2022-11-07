@@ -9,7 +9,7 @@ do
 	p)	PRANAYAMA_TIME="$OPTARG";;
 	s)	SECONDS_TO_BREATHE="$OPTARG";;
         m)      PRANAYAMA_TIME=`expr $OPTARG \* 60`;;
-	[?])	echo "Usage: $0 [-p] seconds_to_pranayama (sefault 30) [-s] base_count (default 3) [-v] voice (default Victoria)"
+	[?])	echo "Usage: $0 [-p] seconds_to_pranayama (default 30) [-s] base_count (default 3) [-v] voice (default Victoria)"
 		exit 1;;
 	esac
 done
