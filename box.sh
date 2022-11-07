@@ -45,6 +45,6 @@ while [ `date +%s` -lt $FINISH_AT ]
 do
 	breathe "breathe in" $SECONDS_TO_BREATHE 1
 	breathe "hold" $SECONDS_TO_BREATHE 1
-	breathe "breathe out" $SECONDS_TO_BREATHE 2
+	breathe "breathe out" $SECONDS_TO_BREATHE 1
 	breathe "hold" $SECONDS_TO_BREATHE 1
 done
